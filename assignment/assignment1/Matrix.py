@@ -3,6 +3,7 @@ import numpy as np
 class Matrix(object):
   def __init__(self):
     pass
+  #第一个循环遍历W矩阵的每一行，用W的每一行分别和x的每一列对应元素相乘，再相加，最后把值放在y列表里
   def mul(self,w,x):
     y = []
     for asix in range(w.shape[0]):
@@ -19,6 +20,7 @@ x_input = np.array([[1,2],[4,5],[6,7]],dtype = np.int)
 
 m = Matrix()
 y_output = m.mul(w_input,x_input)
+#最后将列表y转化为（w的行数，x的列数）尺寸的矩阵
 y_output = np.array(y_output).reshape(w_input.shape[0],x_input.shape[1])
 print(y_output)
 
